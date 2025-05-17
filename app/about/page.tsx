@@ -1,3 +1,5 @@
-export default function AboutPage() {
-  return <p>Meet Mazlin</p>;
+import { StaticMarkdown } from "@/components/static-markdown";
+
+export default async function AboutPage() {
+  return <StaticMarkdown filename="about" />;
 }
