@@ -4,6 +4,7 @@
 @custom-variant dark (&:is(.dark *));
 
 @theme {
+  --font-ding: "plakato-game-dingbats-pro";
   --font-pixel-display: "pf-pixelscript", monospace;
   --font-pixel: "lores-21-serif", serif;
   --font-serif: "etna", serif;

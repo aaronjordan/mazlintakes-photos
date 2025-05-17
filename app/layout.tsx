@@ -28,15 +28,15 @@ export default function RootLayout({
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/hwn1obq.css" />
       </head>
-      <body className="h-full bg-background text-foreground overflow-x-hidden">
+      <body className="h-full bg-brand-main text-foreground overflow-x-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <main className="min-h-full h-full flex flex-col gap-6 items-center border-t-8 border-brand-main">
-            <nav className="w-full flex flex-col pt-4 lg:pt-12 gap-12 items-center">
+          <main className="min-h-full h-full flex flex-col gap-6 items-center bg-background overflow-y-auto">
+            <nav className="w-full flex flex-col pt-4 md:pt-12 gap-12 items-center border-t-8 border-brand-main">
               <div className="relative w-full px-2">
                 <NavMenu />
                 <Link className="flex-grow" href="/">

@@ -43,7 +43,7 @@ export const NavMenu = () => {
   return (
     <Dialog.Root open={open} onOpenChange={setOpen}>
       <Dialog.Trigger asChild>
-        <Button className="lg:hidden">
+        <Button className="md:hidden">
           <Menu strokeWidth="3" />
         </Button>
       </Dialog.Trigger>

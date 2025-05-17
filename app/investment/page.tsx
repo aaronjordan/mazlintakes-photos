@@ -1,3 +1,21 @@
+import { StaticMarkdown } from "@/components/static-markdown";
+
 export default function InvestmentPage() {
-  return <p>More on pricing</p>;
+  return (
+    <section>
+      <header className="my-8 flex justify-center gap-4">
+        <div className="font-ding text-4xl text-brand-main">4</div>
+        <div>
+          <h1 className="text-center font-pixel-display text-4xl">
+            Investments
+          </h1>
+          <p className="text-center font-pixel text-md">
+            (because who doesn't love flowers)
+          </p>
+        </div>
+        <div className="font-ding text-4xl text-brand-main">4</div>
+      </header>
+      <StaticMarkdown filename="investments" />
+    </section>
+  );
 }
