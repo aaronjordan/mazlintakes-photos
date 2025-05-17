@@ -1,9 +1,9 @@
 export const HeaderHero = () => (
   <h1 className="flex flex-col items-center">
-    <span className="font-pixel-display text-5xl text-brand-main">
+    <span className="font-pixel-display text-2xl lg:text-5xl text-brand-main">
       Mazlin Rhea
     </span>
-    <span className="font-serif uppercase text-4xl text-stone-800 font-bold tracking-widest">
+    <span className="font-serif uppercase text-lg lg:text-4xl text-stone-800 font-bold tracking-widest">
       Photography
     </span>
   </h1>

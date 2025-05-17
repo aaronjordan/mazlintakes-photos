@@ -2,17 +2,20 @@ import { ThemeProvider } from "next-themes";
 import Link from "next/link";
 import "./globals.css";
 import { HeaderHero } from "@/components/header-hero";
-import { Navbar } from "@/components/navbar";
-import { twMerge } from "tailwind-merge";
+import { NavBar } from "@/components/navbar";
+import { Menu } from "iconoir-react";
+import { Button } from "@/components/ui/button";
+import { NavMenu } from "@/components/navmenu";
 
-const defaultUrl = process.env.VERCEL_URL
-  ? `https://${process.env.VERCEL_URL}`
+const defaultUrl = process.env.DEPLOYMENT_URL
+  ? `https://${process.env.DEPLOYMENT_URL}`
   : "http://localhost:3000";
 
 export const metadata = {
   metadataBase: new URL(defaultUrl),
-  title: "Next.js and Supabase Starter Kit",
-  description: "The fastest way to build apps with Next.js and Supabase",
+  title: "Mazlin Rhea Photography",
+  description:
+    "Welcome, fellow dreamer! I'm so happy our paths have crossed. I'm Mazlin, a wedding photographer who is here to capture the magic in your love story.",
 };
 
 export default function RootLayout({
@@ -21,24 +24,28 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className={twMerge("h-full")} suppressHydrationWarning>
+    <html lang="en" className="h-full" suppressHydrationWarning>
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/hwn1obq.css" />
       </head>
-      <body className="h-full border border-black bg-background text-foreground">
+      <body className="h-full bg-background text-foreground overflow-x-hidden">
         <ThemeProvider
           attribute="class"
           defaultTheme="system"
           enableSystem
           disableTransitionOnChange
         >
-          <main className="min-h-full h-full flex flex-col gap-6 items-center">
-            <nav className="w-full flex flex-col items-center border-t-8 border-brand-main">
-              <Link className="py-12" href={"/"}>
-                <HeaderHero />
-              </Link>
-              <Navbar />
+          <main className="min-h-full h-full flex flex-col gap-6 items-center border-t-8 border-brand-main">
+            <nav className="w-full flex flex-col pt-4 lg:pt-12 gap-12 items-center">
+              <div className="relative w-full px-2">
+                <NavMenu />
+                <Link className="flex-grow" href="/">
+                  <HeaderHero />
+                </Link>
+              </div>
+              <NavBar />
             </nav>
+
             <div className="flex flex-grow flex-col gap-20 max-w-5xl p-5">
               {children}
             </div>
