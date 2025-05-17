@@ -1,3 +1,4 @@
+import { InvestmentCard } from "@/components/investment-card";
 import { StaticMarkdown } from "@/components/static-markdown";
 
 export default function InvestmentPage() {
@@ -15,6 +16,12 @@ export default function InvestmentPage() {
         </div>
         <div className="font-ding text-4xl text-brand-main">4</div>
       </header>
+      {/* <InvestmentCard
+        variant="default"
+        title="sprout"
+        features={["feature 1", "feature 2"]}
+        cost="9500"
+      /> */}
       <StaticMarkdown filename="investments" />
     </section>
   );

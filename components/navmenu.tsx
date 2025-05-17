@@ -31,7 +31,7 @@ const navItems = [
   },
 ];
 
-const base = "px-3 py-1 rounded-full";
+const base = "px-3 py-1 rounded-full transition-colors";
 const hover = "hover:bg-brand-main hover:text-white";
 
 export const NavMenu = () => {

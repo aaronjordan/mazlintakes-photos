@@ -24,7 +24,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" className="h-full" suppressHydrationWarning>
+    <html lang="en" className="h-full bg-brand-main" suppressHydrationWarning>
       <head>
         <link rel="stylesheet" href="https://use.typekit.net/hwn1obq.css" />
       </head>
@@ -35,18 +35,18 @@ export default function RootLayout({
           enableSystem
           disableTransitionOnChange
         >
-          <main className="min-h-full h-full flex flex-col gap-6 items-center bg-background overflow-y-auto">
+          <main className="min-h-full h-full flex flex-col gap-4 items-center bg-background overflow-y-auto">
             <nav className="w-full flex flex-col pt-4 md:pt-12 gap-12 items-center border-t-8 border-brand-main">
               <div className="relative w-full px-2">
                 <NavMenu />
-                <Link className="flex-grow" href="/">
+                <Link className="text-center" href="/">
                   <HeaderHero />
                 </Link>
               </div>
               <NavBar />
             </nav>
 
-            <div className="flex flex-grow flex-col gap-20 max-w-5xl p-5">
+            <div className="flex flex-grow flex-col gap-20 max-w-full w-[65ch] p-5">
               {children}
             </div>
 

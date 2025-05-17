@@ -9,7 +9,20 @@
   --font-pixel: "lores-21-serif", serif;
   --font-serif: "etna", serif;
 
+  /* 
+
+neutral-N : neutral-1 white - neutral-10 black
+
+
+*/
+
   --color-brand-main: #e55934;
+
+  --color-brand-secondary-lighter: #ffcfc2;
+  --color-brand-secondary-light: #b4d0cf;
+  --color-brand-secondary: #588b8b;
+  --color-brand-secondary-dark: #326565;
+  --color-brand-secondary-darker: #132c2c;
 
   --color-border: var(--border);
   --color-input: var(--input);
