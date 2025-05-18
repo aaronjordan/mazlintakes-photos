@@ -6,7 +6,10 @@ const cardVariants = cva(
   {
     variants: {
       variant: {
-        default: "bg-brand-secondary text-brand-secondary-lighter",
+        default: "bg-brand-primary-five text-brand-primary-four",
+        two: "bg-brand-secondary-five text-brand-secondary-three",
+        three: "bg-brand-tertiary-six text-brand-tertiary-two",
+        four: "bg-brand-light-mode-one bg-brand-light-mode-three",
       },
     },
     defaultVariants: {
@@ -15,16 +18,19 @@ const cardVariants = cva(
   }
 );
 
-const calloutVariants = cva("mt-2 font-serif text-2xl", {
-  variants: {
-    variant: {
-      default: "text-brand-secondary-light",
+const calloutVariants = cva(
+  "flex justify-between flex-wrap gap-6 mt-2 font-serif text-2xl",
+  {
+    variants: {
+      variant: {
+        default: "text-brand-secondary-light",
+      },
     },
-  },
-  defaultVariants: {
-    variant: "default",
-  },
-});
+    defaultVariants: {
+      variant: "default",
+    },
+  }
+);
 
 interface InvestmentProps extends VariantProps<typeof cardVariants> {
   title: string;
@@ -52,7 +58,9 @@ export function InvestmentCard(p: InvestmentProps) {
       {p.afterFeatures && <p>{p.afterFeatures}</p>}
       <div className={calloutVariants({ variant })}>
         <span>Investment: ${p.cost}</span>
-        <Button>Get Started</Button>
+        <Button className="font-pixel" variant="blue">
+          Get Started
+        </Button>
       </div>
     </section>
   );
