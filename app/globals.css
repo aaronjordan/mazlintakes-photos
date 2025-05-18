@@ -103,6 +103,10 @@ neutral-N : neutral-1 white - neutral-10 black
   ::file-selector-button {
     border-color: var(--color-gray-200, currentcolor);
   }
+
+  ::selection {
+    background-color: #e5593440;
+  }
 }
 
 @layer base {

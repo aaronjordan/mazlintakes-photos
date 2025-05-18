@@ -37,9 +37,9 @@ export default function RootLayout({
         >
           <main className="min-h-full h-full flex flex-col gap-4 items-center bg-background overflow-y-auto">
             <nav className="w-full flex flex-col pt-4 md:pt-12 gap-12 items-center border-t-8 border-brand-main">
-              <div className="relative w-full px-2">
+              <div className="relative text-center w-full px-2">
                 <NavMenu />
-                <Link className="text-center" href="/">
+                <Link className="inline-block m-auto" href="/">
                   <HeaderHero />
                 </Link>
               </div>

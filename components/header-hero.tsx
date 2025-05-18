@@ -1,5 +1,5 @@
 export const HeaderHero = () => (
-  <h1 className="flex flex-col items-center">
+  <h1 className="inline-flex flex-col items-center">
     <span className="font-pixel-display text-2xl md:text-5xl text-brand-main">
       Mazlin Rhea
     </span>
