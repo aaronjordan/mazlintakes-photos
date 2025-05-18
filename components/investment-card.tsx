@@ -9,7 +9,7 @@ const cardVariants = cva(
         default: "bg-brand-primary-five text-brand-primary-four",
         two: "bg-brand-secondary-five text-brand-secondary-three",
         three: "bg-brand-tertiary-six text-brand-tertiary-two",
-        four: "bg-brand-light-mode-one bg-brand-light-mode-three",
+        four: "bg-brand-light-mode-three text-brand-light-mode-two",
       },
     },
     defaultVariants: {
@@ -24,6 +24,9 @@ const calloutVariants = cva(
     variants: {
       variant: {
         default: "text-brand-secondary-light",
+        two: "text-brand-secondary-three",
+        three: "text-brand-tertiary-two",
+        four: "text-brand-light-mode-two",
       },
     },
     defaultVariants: {
